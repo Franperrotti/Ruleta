@@ -18,6 +18,10 @@ function sumarPuntos(puntos){
 	dinero += puntos;
     document.querySelector("#dinero").innerHTML = "Tu Mosca: $" + dinero + "USD";
 }
+function PerdesTodo(){
+	dinero -= dinero;
+    document.querySelector("#dinero").innerHTML = "Tu Mosca: $" + dinero + "USD";
+}
 
 
 function calcular(rand){
@@ -47,7 +51,8 @@ function calcular(rand){
             sumarPuntos(250);
             break;
         case valor > 225 && valor <= 270:
-            alert("No has sumado USD =(");
+            alert("Perdiste todo");
+            PerdesTodo();
             break;
         case valor > 270 && valor <= 315:
             alert("has sumado 100 USD");
