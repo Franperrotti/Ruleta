@@ -1,3 +1,5 @@
+window.onload= function (){
+
 const ruleta = document.querySelector("#ruleta");
 
 ruleta.addEventListener("click",girar);
@@ -63,4 +65,27 @@ function calcular(rand){
             sumarPuntos(10);
             break;
     }},5000);
+}
+
+
+
+let contador = 0;
+let tiempo = setInterval(intervalo,1000);
+function intervalo() {
+    contador++;
+    if(contador===60){
+        alert("hermano querido estas ahi!!!!")
+    }
+}
+
+window.onmousemove= function(){
+   contador = 0;
+
+}
+
+
+
+
+
+
 }
